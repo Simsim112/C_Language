@@ -1,0 +1,24 @@
+﻿  team_all.c
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(117,17): warning C4013: 'exit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(125,11): warning C4013: 'system'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(145,10): warning C4013: 'getch'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(418,24): warning C4477: 'printf' : 서식 문자열 '%5d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'char *'입니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(418,24): warning C4477: 'printf' : 서식 문자열 '%10s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'int'입니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(418,24): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(418,24): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 5개 필요하지만 4개가 제공되었습니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(418,24): message : 누락된 variadic 인수 5이(가) 서식 문자열 '%d'에 필요합니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(433,32): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(556,22): warning C4101: 'modify_num' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(692,9): warning C4101: 'backup_num' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(762,9): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(757,31): warning C4101: 'address' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(757,10): warning C4101: 'name1' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(757,21): warning C4101: 'call' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(776,10): warning C4101: 'name' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(932,30): warning C4013: 'atoi'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(937,32): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(952,36): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(957,36): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(986,20): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+C:\Users\PKNU\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c(979,10): warning C4101: 'name' :참조되지 않은 지역 변수입니다.
+  Team_project1.vcxproj -> C:\Users\PKNU\source\repos\Project1\Debug\Team_project1.exe
