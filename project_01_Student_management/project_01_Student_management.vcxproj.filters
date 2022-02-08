@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\심무성\새 폴더\student_score_management.c">
+    <ClCompile Include="student_score_management.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="D:\심무성\새 폴더\Score_answer.c">
+    <ClCompile Include="Score_answer.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

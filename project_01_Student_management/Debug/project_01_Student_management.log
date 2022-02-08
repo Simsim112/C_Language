@@ -1,1 +1,4 @@
-﻿  project_01_Student_management.vcxproj -> C:\Users\PKNU\source\repos\Project1\Debug\project_01_Student_management.exe
+﻿  student_score_management.c
+C:\Users\PKNU\source\repos\Project1\project_01_Student_management\student_score_management.c(242,15): warning C4102: 'defalult': 참조되지 않은 레이블입니다.
+C:\Users\PKNU\source\repos\Project1\project_01_Student_management\student_score_management.c(12,12): warning C4101: 'k' :참조되지 않은 지역 변수입니다.
+  project_01_Student_management.vcxproj -> C:\Users\PKNU\source\repos\Project1\Debug\project_01_Student_management.exe
