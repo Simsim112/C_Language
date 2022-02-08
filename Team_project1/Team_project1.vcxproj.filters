@@ -15,13 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Project1\seller_management_part.c">
+    <ClCompile Include="customer_management_part.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\Project1\customer_management_part.c">
+    <ClCompile Include="seller_management_part.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\노란색팀 - 배달의무성\Total\Total\team_all.c">
+    <ClCompile Include="team_all.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
