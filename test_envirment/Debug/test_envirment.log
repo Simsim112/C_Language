@@ -1,2 +1,8 @@
 ﻿  test.c
+C:\Users\PKNU\source\repos\Project1\test_envirment\test.c(11,2): warning C4091: 'typedef ': 변수를 선언하지 않으면 'bookInfo' 왼쪽은 무시됩니다.
+C:\Users\PKNU\source\repos\Project1\test_envirment\test.c(14,40): warning C4047: '초기화 중': 'bookInfo *'의 간접 참조 수준이 'bookInfo (*)[50]'과(와) 다릅니다.
+C:\Users\PKNU\source\repos\Project1\test_envirment\test.c(103,67): warning C4020: 'strcmp': 실제 매개 변수가 너무 많습니다.
+C:\Users\PKNU\source\repos\Project1\test_envirment\test.c(121,67): warning C4020: 'strcmp': 실제 매개 변수가 너무 많습니다.
+C:\Users\PKNU\source\repos\Project1\test_envirment\test.c(139,63): warning C4020: 'strcmp': 실제 매개 변수가 너무 많습니다.
+C:\Users\PKNU\source\repos\Project1\test_envirment\test.c(110): warning C4716: 'InsertList': 값을 반환해야 합니다.
   test_envirment.vcxproj -> C:\Users\PKNU\source\repos\Project1\Debug\test_envirment.exe
