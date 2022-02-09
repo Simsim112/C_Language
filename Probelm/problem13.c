@@ -8,13 +8,14 @@ typedef struct bookInfo {
 	char bookTitle[MAX_LENGHTH];
 	char bookPub[MAX_LENGHTH];
 	int bookPrice;
-};
+}BookInfo;
+
 int MAX_BOOK = 3;
-struct bookInfo bookInfo[50];
-struct bookInfo* PtbookInfo = &bookInfo;
+BookInfo bookInfo[50];
+BookInfo* PtbookInfo = &bookInfo;
 
 void PrintSortList();
-int InsertList(struct bookInfo* bookPtr);
+int InsertList(BookInfo* bookPtr);
 void SortByTitle();
 void SortByPubName();
 void SortByPrice();
@@ -22,8 +23,8 @@ void print_category();
 
 int main() {
 
-	struct bookInfo newbook;
-	struct bookInfo* newPtbookInfo = &newbook;
+	BookInfo newbook;
+	BookInfo* newPtbookInfo = &newbook;
 
 	int choice;
 
@@ -82,10 +83,10 @@ void PrintSortList()
 }
 
 //새거 넣고 도서이름 오름차순 배열 
-int InsertList(struct bookInfo* bookPtr)
+int InsertList(BookInfo* bookPtr)
 {
 	int max, i;
-	struct bookInfo temp;
+	BookInfo temp;
 
 	//새거 넣기
 	for (i = MAX_BOOK; i < MAX_BOOK + 1; i++)
@@ -100,25 +101,26 @@ int InsertList(struct bookInfo* bookPtr)
 	for (i = 0; i < MAX_BOOK; i++) {
 		max = i;
 		for (int j = i; j < MAX_BOOK; j++) {
-			if (strcmp(PtbookInfo[max].bookTitle, PtbookInfo[j].bookTitle, 1) == 1)
+			if (strcmp(PtbookInfo[max].bookTitle, PtbookInfo[j].bookTitle) == 1)
 				max = j;
 		}
 		temp = PtbookInfo[max];
 		PtbookInfo[max] = PtbookInfo[i];
 		PtbookInfo[i] = temp;
 	}
+	return 0;
 }
 
 //타이틀 오름차순 배열 
 void SortByTitle() {
 	int i, max;
-	struct bookInfo temp;
+	BookInfo temp;
 
 	//오름차순 정렬
 	for (i = 0; i < MAX_BOOK; i++) {
 		max = i;
 		for (int j = i; j < MAX_BOOK; j++) {
-			if (strcmp(PtbookInfo[max].bookTitle, PtbookInfo[j].bookTitle, 1) == 1)
+			if (strcmp(PtbookInfo[max].bookTitle, PtbookInfo[j].bookTitle) == 1)
 				max = j;
 		}
 		temp = PtbookInfo[max];
@@ -130,13 +132,13 @@ void SortByTitle() {
 //출판사명 오름차순 배열 
 void SortByPubName() {
 	int i, max;
-	struct bookInfo temp;
+	BookInfo temp;
 
 	//오름차순 정렬
 	for (i = 0; i < MAX_BOOK; i++) {
 		max = i;
 		for (int j = i; j < MAX_BOOK; j++) {
-			if (strcmp(PtbookInfo[max].bookPub, PtbookInfo[j].bookPub, 1) == 1)
+			if (strcmp(PtbookInfo[max].bookPub, PtbookInfo[j].bookPub) == 1)
 				max = j;
 		}
 		temp = PtbookInfo[max];
@@ -148,7 +150,7 @@ void SortByPubName() {
 //가격 오름차순 배열 
 void SortByPrice() {
 	int i, max;
-	struct bookInfo temp;
+	BookInfo temp;
 
 	//오름차순 정렬
 	for (i = 0; i < MAX_BOOK; i++) {
