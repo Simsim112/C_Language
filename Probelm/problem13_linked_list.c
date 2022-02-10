@@ -41,6 +41,7 @@ void AddNode(BookInfo* head, BookInfo* current)
 {
 	BookInfo* bookList = (BookInfo*)malloc(sizeof(BookInfo));
 	current->next = bookList;
+	current = current->next;
 	strcpy(current->bookTitle, "¾î¸°¿ÕÀÚ2");
 	
 	current->next = NULL;
