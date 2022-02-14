@@ -163,7 +163,7 @@ int Seller_Customer() {
 
     printf("★배달의 무성★\n **오픈이벤트중**\n");
     printf("---------------------------\n");
-    printf(" (1) 판매자\n (2) 주문자\n");
+    printf(" (1) 판매자\n (2) 주문자\n (3) 프로그램 종료\n");
     printf("---------------------------\n");
     printf("이동하실 번호를 입력해주세요 : ");
 
@@ -175,17 +175,22 @@ int Seller_Customer() {
 //판매자 메뉴 선택지
 void Seller_menu() {
 
-    system("cls");
-
     int choice_seller;
 
-    printf("★배달의 무성★\n **오픈이벤트중**\n");
-    printf("---------------------------\n");
-    printf(" (1) 가게 관리\n (2) 메뉴 관리\n (3) 처음 화면으로\n");
-    printf("---------------------------\n");
-    printf("이동하실 번호를 입력해주세요 : ");
+    do {
+        system("cls");
+        printf("★배달의 무성★\n **오픈이벤트중**\n");
+        printf("---------------------------\n");
+        printf(" (1) 가게 관리\n (2) 메뉴 관리\n (3) 처음 화면으로\n");
+        printf("---------------------------\n");
+        printf("이동하실 번호를 입력해주세요(1 ~ 3) : ");
+        scanf("%d", &choice_seller);
+        if (choice_seller < 1 || choice_seller > 3) {
 
-    scanf("%d", &choice_seller);
+            printf("이동하실 번호를 입력해주세요(1 ~ 3) : ");
+        }
+
+    } while (choice_seller < 1 || choice_seller > 3);
 
     switch (choice_seller) {
 
@@ -205,15 +210,22 @@ void Shop_menu() {
 
     int shop_menu;
 
-    system("cls");
-    printf("★배달의 무성★\n **오픈이벤트중**\n");
-    printf("---------------------------\n");
-    printf(" (1) 가게 등록\n (2) 가게 전체보기\n (3) 가게 수정\n (4) 가게 검색\n (5) 가게 삭제\n (6) 가게 복구\n (7) 처음 화면으로\n");
-    printf("---------------------------\n");
-    printf("이동하실 번호를 입력해주세요 : ");
+    do {
+        system("cls");
+        printf("★배달의 무성★\n **오픈이벤트중**\n");
+        printf("---------------------------\n");
+        printf(" (1) 가게 등록\n (2) 가게 전체보기\n (3) 가게 수정\n (4) 가게 검색\n (5) 가게 삭제\n (6) 가게 복구\n (7) 처음 화면으로\n");
+        printf("---------------------------\n");
+        printf("이동하실 번호를 입력해주세요(1 ~ 7) : ");
 
-    scanf("%d", &shop_menu);
-    printf("\n");
+        scanf("%d", &shop_menu);
+        printf("\n");
+        if (shop_menu < 1 || shop_menu > 7) {
+
+            printf("이동하실 번호를 입력해주세요(1 ~ 7) : ");
+        }
+
+    } while (shop_menu < 1 || shop_menu > 7);
 
     switch (shop_menu) {
 
@@ -246,15 +258,22 @@ void Menu_menu() {
 
     int menu_menu;
 
-    system("cls");
-    printf("★배달의 무성★\n **오픈이벤트중**\n");
-    printf("---------------------------\n");
-    printf(" (1) 메뉴 등록\n (2) 메뉴 수정\n (3) 메뉴 삭제\n (4) 메뉴 복구\n (5) 처음 화면으로\n");
-    printf("---------------------------\n");
-    printf("이동하실 번호를 입력해주세요 : ");
+    do {
+        system("cls");
+        printf("★배달의 무성★\n **오픈이벤트중**\n");
+        printf("---------------------------\n");
+        printf(" (1) 메뉴 등록\n (2) 메뉴 수정\n (3) 메뉴 삭제\n (4) 메뉴 복구\n (5) 처음 화면으로\n");
+        printf("---------------------------\n");
+        printf("이동하실 번호를 입력해주세요(1 ~ 5) : ");
 
-    scanf("%d", &menu_menu);
-    printf("\n");
+        scanf("%d", &menu_menu);
+        printf("\n");
+        if (menu_menu < 1 || menu_menu > 5) {
+
+            printf("이동하실 번호를 입력해주세요(1 ~ 5) : ");
+        }
+
+    } while (menu_menu < 1 || menu_menu > 5);
 
     switch (menu_menu) {
 
@@ -280,7 +299,7 @@ void Menu_menu() {
 void customer_menu() {
 
     int customer_menu;
-
+    int LOOP_ESCAPE = 1;
     system("cls");
     printf("★배달의 무성★\n **오픈이벤트중**\n");
     printf("---------------------------\n");
@@ -288,34 +307,44 @@ void customer_menu() {
     printf("---------------------------\n");
     printf("이동하실 번호를 입력해주세요 : ");
 
-    scanf("%d%*c", &customer_menu);
+    while (LOOP_ESCAPE) {
+        while (getchar() != '\n');
+        scanf("%d", &customer_menu);
+        switch (customer_menu) {
 
-    switch (customer_menu) {
+        case 1:
+            Customer_add();
+            count.customer++;
+            LOOP_ESCAPE = 0;
+            break;
+        case 2:
 
-    case 1:
-        Customer_add();
-        count.customer++;
-        break;
-    case 2:
+            Customer_update();
+            LOOP_ESCAPE = 0;
+            break;
+        case 3:
+            Customer_look();
+            LOOP_ESCAPE = 0;
+            break;
+        case 4:
+            Customer_delete();
+            LOOP_ESCAPE = 0;
+            break;
+        case 5:
+            Customer_recovery();
+            LOOP_ESCAPE = 0;
+            break;
+        case 6:
+            Customer_order();
+            LOOP_ESCAPE = 0;
+            break;
+        case 7:
+            LOOP_ESCAPE = 0;
+            break;
+        default:
+            printf("1~7사이의 숫자를 입력해주세요 : ");
+        }
 
-        Customer_update();
-        break;
-    case 3:
-        Customer_look();
-        break;
-    case 4:
-        Customer_delete();
-        break;
-    case 5:
-        Customer_recovery();
-        break;
-    case 6:
-        Customer_order();
-        break;
-    case 7:
-        break;
-    default:
-        printf("1~6사이의 숫자를 입력해주세요\n");
     }
 }
 
@@ -330,9 +359,12 @@ void selleradd()
     scanf("%s", names);
     strcpy(bas[count.shop].name, names);
 
+
+
     printf("주소를 등록해주세요 : ");
     scanf("%s", adds);
     strcpy(bas[count.shop].add, adds);
+
 
     printf("전화번호를 입력해주세요 : ");
     scanf("%d%d", &bas[count.shop].num, &bas[count.shop].nums);
@@ -353,7 +385,7 @@ void sellerlook()
     printf("********가게전체조회창입니다*****\n\n");
     for (i = 0; i < count.shop; i++)
     {
-        if (bas[i].del == 1)
+        if (pbas[i]->del == 1)
         {
             continue;
         }
@@ -378,7 +410,7 @@ void sellerupdate()
     {
         if (i == number - 1)
         {
-            if (bas[i].del == 1)
+            if (pbas[i]->del == 1)
             {
                 printf("이미 삭제된 가게입니다.\n");
             }
@@ -419,7 +451,7 @@ void sellersh()
             }
             else
             {
-                printf("%5d%10s%10s%10d-%d",count.shop + 1, pbas[i]->name, pbas[i]->add, pbas[i]->num, pbas[i]->nums);
+                printf("%10s%10s%10d-%d", pbas[i]->name, pbas[i]->add, pbas[i]->num, pbas[i]->nums);
                 printf("  감사합니다.\n");
                 count1 = 1;
             }
@@ -470,7 +502,7 @@ void sellerdel()
 //판매자 복구 
 void sellerrecovery() {
 
-    int choice = 0, number = 0;
+    int number;
 
     while (1)
     {
@@ -504,6 +536,7 @@ void sellerrecovery() {
     movemenu();
 }
 
+
 //메뉴 추가 
 void menuadd() {
 
@@ -515,18 +548,18 @@ void menuadd() {
 
         int select_shop;
 
-        for (int i = 0; i < count.shop; i++) {
+        puts("  번호       상호명       주소       전화번호    ");
+        puts("==================================================");
 
-            puts("  번호       상호명       주소       전화번호    ");
-            puts("==================================================");
-            printf("%5d%15s%12s%8d-%d\n", i + 1, bas[i].name, bas[i].add, bas[i].num, bas[i].nums);
+        for (int i = 0; i < count.shop; i++) {
+            if (pbas[i]->del == 0)
+                printf("%5d%15s%12s%8d-%d\n", i + 1, pbas[i]->name, pbas[i]->add, pbas[i]->num, pbas[i]->nums);
         }
         printf("\n");
 
         printf("메뉴를 등록할 가게번호를 검색하세요 : ");
         scanf("%d", &select_shop);
         printf("\n");
-
 
         for (int i = 0; i < count.shop; i++) {
 
@@ -542,6 +575,8 @@ void menuadd() {
                 menu[select_shop - 1][count.menu[select_shop - 1]].menu_except = EXCEPT_OFF;
 
                 save_menu_count = select_shop - 1;
+
+                pmenu[select_shop - 1][count.menu[select_shop - 1]] = &menu[select_shop - 1][count.menu[select_shop - 1]];
 
                 break;
             }
@@ -573,11 +608,12 @@ void menuupdate() {
         puts(" ==== 메뉴 수정 ==== ");
         printf("\n");
 
-        for (int i = 0; i < count.shop; i++) {
+        puts("  번호       상호명       주소       전화번호    ");
+        puts("==================================================");
 
-            puts("  번호       상호명       주소       전화번호    ");
-            puts("==================================================");
-            printf("%5d%15s%12s%8d-%d\n", i + 1, bas[i].name, bas[i].add, bas[i].num, bas[i].nums);
+        for (int i = 0; i < count.shop; i++) {
+            if (pbas[i]->del == 0)
+                printf("%5d%15s%12s%8d-%d\n", i + 1, pbas[i]->name, pbas[i]->add, pbas[i]->num, pbas[i]->nums);
 
         }
 
@@ -593,13 +629,15 @@ void menuupdate() {
                     printf("등록된 메뉴가 없습니다.");
                 }
                 else if (count.menu[select_shop - 1] < MAX_NUM) {
+
+                    puts("  번호       품목       메뉴명       가격    ");
+                    puts("================================================");
+
                     for (int j = 0; j < count.menu[select_shop - 1]; j++) {
 
-                        if (menu[select_shop - 1][j].menu_except == 0)
+                        if (pmenu[select_shop - 1][j]->menu_except == 0)
 
-                            puts("  번호       품목       메뉴명       가격    ");
-                        puts("================================================");
-                        printf("%5d%12s%14s%11d\n", j + 1, menu[select_shop - 1][j].menu_index, menu[select_shop - 1][j].menu_name, menu[select_shop - 1][j].menu_price);
+                            printf("%5d%12s%14s%11d\n", j + 1, pmenu[select_shop - 1][j]->menu_index, pmenu[select_shop - 1][j]->menu_name, pmenu[select_shop - 1][j]->menu_price);
                     }
 
                     printf("\n");
@@ -609,16 +647,17 @@ void menuupdate() {
 
                     printf("메뉴 품목을 입력해주세요 : ");
                     scanf("%s", modify_index);
-                    strcpy(menu[select_shop - 1][menu_search - 1].menu_index, modify_index);
+                    strcpy(pmenu[select_shop - 1][menu_search - 1]->menu_index, modify_index);
 
                     printf("메뉴 이름을 입력해주세요 : ");
                     scanf("%s", modify_name);
-                    strcpy(menu[select_shop - 1][menu_search - 1].menu_name, modify_name);
+                    strcpy(pmenu[select_shop - 1][menu_search - 1]->menu_name, modify_name);
 
                     printf("메뉴 가격을 입력해주세요 : ");
                     scanf("%d", &modify_price);
-                    menu[select_shop - 1][menu_search - 1].menu_price = modify_price;
+                    pmenu[select_shop - 1][menu_search - 1]->menu_price = modify_price;
 
+                    break;
                 }
             }
 
@@ -648,11 +687,12 @@ void menudel() {
         puts(" ==== 메뉴 삭제 ==== ");
         printf("\n");
 
-        for (int i = 0; i < count.shop; i++) {
+        puts("  번호       상호명       주소       전화번호    ");
+        puts("==================================================");
 
-            puts("  번호       상호명       주소       전화번호    ");
-            puts("==================================================");
-            printf("%5d%15s%12s%8d-%d\n", i + 1, bas[i].name, bas[i].add, bas[i].num, bas[i].nums);
+        for (int i = 0; i < count.shop; i++) {
+            if (pbas[i]->del == 0)
+                printf("%5d%15s%12s%8d-%d\n", i + 1, pbas[i]->name, pbas[i]->add, pbas[i]->num, pbas[i]->nums);
 
         }
 
@@ -667,12 +707,15 @@ void menudel() {
                     printf("등록된 메뉴가 없습니다.");
                 }
                 else if (count.menu[delete_search - 1] < MAX_NUM) {
+
+                    puts("  번호       품목       메뉴명       가격    ");
+                    puts("================================================");
+
                     for (int j = 0; j < count.menu[delete_search - 1]; j++) {
 
-                        if (menu[delete_search - 1][j].menu_except == 0)
-                            puts("  번호       품목       메뉴명       가격    ");
-                        puts("================================================");
-                        printf("%5d%12s%14s%11d\n", j + 1, menu[delete_search - 1][j].menu_index, menu[delete_search - 1][j].menu_name, menu[delete_search - 1][j].menu_price);
+                        if (pmenu[delete_search - 1][j]->menu_except == 0)
+
+                            printf("%5d%12s%14s%11d\n", j + 1, pmenu[delete_search - 1][j]->menu_index, pmenu[delete_search - 1][j]->menu_name, pmenu[delete_search - 1][j]->menu_price);
 
                     }
 
@@ -681,7 +724,9 @@ void menudel() {
                     scanf("%d", &delete_search2);
                     printf("\n");
 
-                    menu[delete_search - 1][delete_search2 - 1].menu_except = EXCEPT_ON;
+                    pmenu[delete_search - 1][delete_search2 - 1]->menu_except = EXCEPT_ON;
+
+                    break;
                 }
             }
 
@@ -711,11 +756,12 @@ void menurecovery() {
         puts(" ==== 메뉴 복구 ==== ");
         printf("\n");
 
-        for (int i = 0; i < count.shop; i++) {
+        puts("  번호       상호명       주소       전화번호    ");
+        puts("==================================================");
 
-            puts("  번호       상호명       주소       전화번호    ");
-            puts("==================================================");
-            printf("%5d%15s%12s%8d-%d\n", i + 1, bas[i].name, bas[i].add, bas[i].num, bas[i].nums);
+        for (int i = 0; i < count.shop; i++) {
+            if (pbas[i]->del == 0)
+                printf("%5d%15s%12s%8d-%d\n", i + 1, pbas[i]->name, pbas[i]->add, pbas[i]->num, pbas[i]->nums);
 
         }
 
@@ -731,12 +777,13 @@ void menurecovery() {
                 }
                 else if (count.menu[backup_search - 1] < MAX_NUM) {
                     printf(" \n == 삭제 된 항목 == \n\n");
+                    puts("  번호       품목       메뉴명       가격    ");
+                    puts("================================================");
+
                     for (int j = 0; j < count.menu[backup_search - 1]; j++) {
 
-                        if (menu[backup_search - 1][j].menu_except == 1)
-                            puts("  번호       품목       메뉴명       가격    ");
-                        puts("================================================");
-                        printf("%5d%12s%14s%11d\n", j + 1, menu[backup_search - 1][j].menu_index, menu[backup_search - 1][j].menu_name, menu[backup_search - 1][j].menu_price);
+                        if (pmenu[backup_search - 1][j]->menu_except == 1)
+                            printf("%5d%12s%14s%11d\n", j + 1, pmenu[backup_search - 1][j]->menu_index, pmenu[backup_search - 1][j]->menu_name, pmenu[backup_search - 1][j]->menu_price);
                     }
 
                     printf("\n");
@@ -745,7 +792,9 @@ void menurecovery() {
 
                     printf("\n");
 
-                    menu[backup_search - 1][backup_search2 - 1].menu_except = EXCEPT_OFF;
+                    pmenu[backup_search - 1][backup_search2 - 1]->menu_except = EXCEPT_OFF;
+
+                    break;
                 }
             }
             else if (i == count.shop - 1) {
@@ -765,9 +814,10 @@ void menurecovery() {
 //고객 입력
 void Customer_add()
 {
-    char name1[10], call[20], address[100];
-    Customer[count.customer].del = 0;
+    scanf("%*c");
     system("cls");
+
+    Customer[count.customer].del = 0;
     printf("   <고객등록페이지>   \n\n");
     printf("사용자 이름을 입력해주세요: ");
     gets(Customer[count.customer].name);
@@ -777,16 +827,20 @@ void Customer_add()
     gets(Customer[count.customer].address);
     printf("사용자 정보가 입력되었습니다.\n");
 
-    //pCustomer[count.customer] = &Customer[count.customer];
+    pCustomer[count.customer] = &Customer[count.customer];
 
     movemenu();
 }
 
 //고객 업데이트
-void Customer_update()
-{
-    int choice = 0, number = 0;
-    char name[10], name1[10], call[20], address[100];
+void Customer_update() {
+
+    scanf("%*c");
+    system("cls");
+
+    int choice = 0, LOOP_ESCAPE = 1;
+    char number[20], name1[10], call[20], address[100];
+
     while (1)
     {
         if (count.customer == 0) //등록된 고객이 한명도 없을 때
@@ -795,11 +849,13 @@ void Customer_update()
         }
         else
         { //등록된 고객이 있을 경우 
+
             printf("수정하려는 고객번호를 입력해주세요: ");
-            scanf("%d%*c", &number);
+            scanf("%s", &number);
+
             for (int i = 0; i < count.customer; i++)
             {
-                if (i == number) //찾는 고객이 있을 경우
+                if (i == atoi(number) && Customer_check(number) == 0) //찾는 고객이 있을 경우
                 {
                     if (pCustomer[i]->del == 1)
                     {
@@ -812,34 +868,41 @@ void Customer_update()
                         printf("----------------------------------------------------------------\n");
                         printf("%3d %10s %18s %18s\n", i, pCustomer[i]->name, pCustomer[i]->phone, pCustomer[i]->address);
                         Customer_print_category2();
-                        while (1)
+                        while (LOOP_ESCAPE)
                         {
-                            choice = Customer_Select(choice);
+                            while (getchar() != '\n');
+                            scanf("%d", &choice);
                             switch (choice)
                             {
+
                             case 1:
+                                scanf("%*c");
                                 printf("수정할 이름을 입력해주세요: ");
                                 scanf("%s", name1);
                                 strcpy(pCustomer[i]->name, name1);
                                 printf("이름이 %s으로 수정되었습니다.\n\n", pCustomer[i]->name);
+                                LOOP_ESCAPE = 0;
                                 break;
                             case 2:
+                                scanf("%*c");
                                 printf("수정할 전화번호를 입력해주세요: ");
                                 scanf("%s", call);
                                 strcpy(pCustomer[i]->phone, call);
                                 printf("전화번호가 %s으로 수정되었습니다.\n\n", pCustomer[i]->phone);
+                                LOOP_ESCAPE = 0;
                                 break;
                             case 3:
+                                scanf("%*c");
                                 printf("수정할 주소를 입력해주세요: ");
                                 gets(address);
                                 strcpy(pCustomer[i]->address, address);
                                 printf("주소가 %s으로 수정되었습니다.\n\n", pCustomer[i]->address);
+                                LOOP_ESCAPE = 0;
                                 break;
                             default:
-                                printf("1~3사이의 숫자를 입력해주세요\n");
+                                printf("1~3사이의 숫자를 입력해주세요: ");
                                 break;
                             }
-                            break;
                         }
                     }
                     break;
@@ -988,9 +1051,8 @@ void Customer_delete()
 //고객 복구
 void Customer_recovery()
 {
-    int choice = 0, number = 0, count1 = 0;
-    char name[10];
-    char name2[10];
+    int choice = 0, count1 = 0;
+    char name[10], name2[10], number[20];
     while (1)
     {
         if (count.customer == 0) //등록된 고객이 한명도 없을 때
@@ -1001,10 +1063,10 @@ void Customer_recovery()
         else
         { //등록된 고객이 있을 경우 
             printf("복구하려는 고객번호를 입력해주세요: ");
-            scanf("%d", &number);
+            scanf("%s", &number);
             for (int i = 0; i < count.customer; i++)
             {
-                if (i == number)
+                if (i == atoi(number) && Customer_check(number) == 0)
                 {
                     if (pCustomer[i]->del == 0)
                     {
@@ -1053,6 +1115,7 @@ void Customer_print_category2() {
 int Customer_Select(int choice)
 {
     printf("항목을 선택해주세요: ");
+    while (getchar() != '\n');
     scanf("%d%*c", &choice);
     return choice;
 }
@@ -1131,7 +1194,7 @@ int Customer_check(char name[])
 //고객 주문                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 void Customer_order()
 {
-    int menu_search, select_shop, count1 = 0, count2 = 0, like;
+    int menu_search, select_shop, count1 = 0, count2 = 0, like, LOOP_ESCAPE = 1;
 
     system("cls");
     //가게 없을때
@@ -1146,9 +1209,9 @@ void Customer_order()
         puts(" ============== 가게 목록 ============== ");
         printf("\n");
         //있는 가게 출력해주고(삭제된건 아직 고려 안됨)
+        puts("  번호       상호명       주소       전화번호    ");
+        puts("==================================================");
         for (int i = 0; i < count.shop; i++) {
-            puts("  번호       상호명       주소       전화번호    ");
-            puts("==================================================");
             printf("%5d%15s%12s%8d-%d\n", i + 1, bas[i].name, bas[i].add, bas[i].num, bas[i].nums);
 
         }
@@ -1181,16 +1244,23 @@ void Customer_order()
                 else if (count.menu[select_shop - 1] < MAX_NUM)
                 {
                     printf("(1)메뉴가격순\n(2)메뉴이름순\n");
-                    scanf("%d", &like);
-                    switch (like)
-                    {
-                    case 1:
-                        SortByMenu(select_shop);
-                        break;
-
-                    case 2:
-                        SortByMenu1(select_shop);
-                        break;
+                    while (LOOP_ESCAPE) {
+                        while (getchar() != '\n');
+                        scanf("%d", &like);
+                        switch (like)
+                        {
+                        case 1:
+                            SortByMenu(select_shop);
+                            LOOP_ESCAPE = 0;
+                            break;
+                        case 2:
+                            SortByMenu1(select_shop);
+                            LOOP_ESCAPE = 0;
+                            break;
+                        default:
+                            printf("1~2사이의 숫자를 입력해주세요: ");
+                            break;
+                        }
                     }
                     printf("\n");
                     printf("주문 하고 싶은 메뉴 번호를 입력해주세요 : ");
@@ -1238,20 +1308,20 @@ void Customer_order()
 }
 
 //가격 정렬 
-void SortByMenu(int select_shop) 
+void SortByMenu(int select_shop)
 {
     int i, j, max;
-    struct SHOP_MENU *temp;
+    struct SHOP_MENU* temp;
 
     for (i = 0; i < count.menu[select_shop - 1]; i++)
     {
         pmenu[select_shop - 1][i] = &menu[select_shop - 1][i];
     }
 
-    for (i = 0; i < count.menu[select_shop - 1]; i++) 
+    for (i = 0; i < count.menu[select_shop - 1]; i++)
     {
         max = i;
-        for (j = i; j < count.menu[select_shop - 1]; j++) 
+        for (j = i; j < count.menu[select_shop - 1]; j++)
         {
             if (pmenu[select_shop - 1][max]->menu_price < pmenu[select_shop - 1][j]->menu_price)
                 max = j;

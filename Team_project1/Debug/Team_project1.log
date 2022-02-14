@@ -2,18 +2,14 @@
 C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(125,17): warning C4013: 'exit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
 C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(134,11): warning C4013: 'system'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
 C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(155,10): warning C4013: 'getch'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(438,32): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(564,22): warning C4101: 'modify_num' :참조되지 않은 지역 변수입니다.
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(703,9): warning C4101: 'backup_num' :참조되지 않은 지역 변수입니다.
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(773,9): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(768,31): warning C4101: 'address' :참조되지 않은 지역 변수입니다.
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(768,10): warning C4101: 'name1' :참조되지 않은 지역 변수입니다.
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(768,21): warning C4101: 'call' :참조되지 않은 지역 변수입니다.
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(789,10): warning C4101: 'name' :참조되지 않은 지역 변수입니다.
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(945,30): warning C4013: 'atoi'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(950,32): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(965,36): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(970,36): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(999,20): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
-C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(992,10): warning C4101: 'name' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(470,32): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(599,22): warning C4101: 'modify_num' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(748,9): warning C4101: 'backup_num' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(823,9): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(858,30): warning C4013: 'atoi'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(1013,32): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(1028,36): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(1033,36): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(1061,20): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+C:\Users\PKNU\source\repos\Project1\Team_project1\poninter_team_all.c(1055,10): warning C4101: 'name' :참조되지 않은 지역 변수입니다.
   Team_project1.vcxproj -> C:\Users\PKNU\source\repos\Project1\Debug\Team_project1.exe
