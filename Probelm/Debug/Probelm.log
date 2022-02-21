@@ -1,2 +1,6 @@
-﻿  problem13_linked_list.c
+﻿  problem14_2.c
+C:\Users\PKNU\source\repos\Project1\Probelm\problem14_2.c(11,7): warning C4101: 'weather' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\source\repos\Project1\Probelm\problem14_2.c(10,6): warning C4101: 'time' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\source\repos\Project1\Probelm\problem14_2.c(8,6): warning C4101: 'null_check' :참조되지 않은 지역 변수입니다.
+C:\Users\PKNU\source\repos\Project1\Probelm\problem14_2.c(9,7): warning C4101: 'local' :참조되지 않은 지역 변수입니다.
   Probelm.vcxproj -> C:\Users\PKNU\source\repos\Project1\Debug\Probelm.exe

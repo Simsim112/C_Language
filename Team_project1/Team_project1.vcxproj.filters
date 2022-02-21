@@ -24,6 +24,9 @@
     <ClCompile Include="team_all.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="linked_list_team_all.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="poninter_team_all.c">
       <Filter>소스 파일</Filter>
     </ClCompile>

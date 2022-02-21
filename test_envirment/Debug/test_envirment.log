@@ -1,4 +1,1 @@
-﻿  test.c
-C:\Users\PKNU\source\repos\Project1\test_envirment\test.c(12,7): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\PKNU\source\repos\Project1\test_envirment\test.c(13,26): warning C4013: 'malloc'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  test_envirment.vcxproj -> C:\Users\PKNU\source\repos\Project1\Debug\test_envirment.exe
+﻿
